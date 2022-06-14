@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>
+      flask
+    </title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+        <script>
+          swal('{{ message }}');
+        </script>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% endwith %}
+    {% block y %}{% endblock %}
+  </body>
+
+</html>

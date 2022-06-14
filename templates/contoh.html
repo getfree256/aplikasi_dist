@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+  {% block title %}
+  <title>Bootstrap Simple Login Form</title>
+  {% endblock %}
+
+  {% block styles %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  {% endblock %}
+
+{% endblock %}
+
+{% block content %}
+  <h1>Hello, Bootstrap</h1>
+  {% if session.session_usr %}
+      {{ session.session_usr }}
+  {% else %}
+    
+  {% endif %}
+{% endblock %}
